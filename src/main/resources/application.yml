@@ -1,0 +1,56 @@
+server:
+  port: 8081
+  error:
+    path: /error
+  servlet:
+    session:
+      timeout: 30m
+    #context-path: /chapter02
+  tomcat:
+    uri-encoding: UTF-8
+    max-threads: 500
+    basedir: /home/prolik/tmp
+  # https 证书配置
+  ssl:
+    key-store: key.key
+    key-alias: tomcathttps
+    key-password: likang-test
+spring:
+  profiles:
+    active: dev
+  thymeleaf:
+    cache: false
+    check-template: true
+    check-template-location: true
+    encoding: UTF-8
+    prefix: classpath:/templates/
+    servlet:
+      content-type: text/html
+    suffix: .html
+
+
+  freemarker:
+    # httpservletrequest 的属性是否可以覆盖controller中的model 同名项
+    allow-request-override: false
+    # httpsession 的属性是否可以覆盖 controller 中的model 同名项
+    allow-session-override: false
+    cache: false
+    charset: UTF-8
+    check-template-location: true
+    content-type: text/html
+    # 是否将 httpservletrequest 中的属性添加到model 中
+    expose-request-attributes: false
+    # 是否将 httpsession 中的属性添加到model 中
+    expose-session-attributes: false
+    suffix: .ftl
+    template-loader-path: classpath://templates/
+
+
+    #配置myfastjsonConfig 后需要加上这段配置，不然，中文会乱码
+    http:
+      encoding:
+        force-response:true
+  # 直接定义静态资源过滤规则
+  mvc:
+    static-path-pattern: /static/**
+

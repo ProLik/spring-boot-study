@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>图书列表</title>
+</head>
+<body>
+<table>
+    <thead>
+        <tr>
+            <td>图书编号</td>
+            <td>图书名称</td>
+            <td>图书作者</td>
+        </tr>
+    </thead>
+    <tbody>
+    <#if books??&&(books.size>0)>
+    <#list books as book>
+    <tr>
+    <td>${books.id}<td>
+    <td>${books.name}}<td>
+    <td>${books.author}}<td>
+    </tr>
+    </#list>
+    </#if>
+    </tbody>
+</table>
+</body>
+</html>
