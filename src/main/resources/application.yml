@@ -53,4 +53,6 @@ spring:
   # 直接定义静态资源过滤规则
   mvc:
     static-path-pattern: /static/**
+  resources:
+    static-locations: classpath:/static/
 

@@ -1,7 +1,9 @@
 package com.prolik.java.springbootstudy.config;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.converter.HttpMessageConverter;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import java.util.List;
@@ -32,5 +34,15 @@ public class MyWebMvcConfig implements WebMvcConfigurer {
             converter.setFastJsonConfig(config);
             converters.add(converter);
         }
+    }*/
+
+
+    /**
+     * 第二种方式自定义配置文件过滤规则
+     */
+   /* @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        registry.addResourceHandler("/static/**")
+                .addResourceLocations("classpath:/static/");
     }*/
 }
