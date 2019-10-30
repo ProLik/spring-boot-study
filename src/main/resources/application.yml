@@ -1,5 +1,5 @@
 server:
-  port: 8081
+  port: 8080
   error:
     path: /error
   servlet:
@@ -11,10 +11,10 @@ server:
     max-threads: 500
     basedir: /home/prolik/tmp
   # https 证书配置
-  ssl:
-    key-store: key.key
-    key-alias: tomcathttps
-    key-password: likang-test
+#  ssl:
+#    key-store: key.key
+#    key-alias: tomcathttps
+#    key-password: likang-test
 spring:
   profiles:
     active: dev

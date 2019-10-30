@@ -12,9 +12,6 @@ public class SpringBootStudyApplication {
 	public static void main(String[] args) {
 		///new SpringApplicationBuilder(SpringBootStudyApplication.class).bannerMode(Banner.Mode.OFF).run(args);
 		SpringApplication.run(SpringBootStudyApplication.class, args);
-
-
-
 	}
 
 }
